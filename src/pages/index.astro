@@ -1,16 +1,53 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import ProfileLinks from '../components/ProfileLinks.astro'
+
+const links = [
+  {
+    title: "GitHub",
+    href: "https://github.com/twhite96"
+  },
+  {
+    title: "Website",
+    href: "https://0x8c.org"
+  },
+  {
+    title: "LinkedIn",
+    href: "https://linkedin.com/in/tiffanyrwhite"
+  },
+  {
+    title: "TryHackMe",
+    href: "https://tryhackme.com/p/tiffcatte"
+  },
+  {
+    title: "HackTheBox",
+    href: "https://app.hackthebox.com/profile/1602474"
+  },
+  {
+    title: "Loose Notes",
+    href: "https://notes.0x8c.org"
+  },
+  {
+    title: "Wiki",
+    href: "https://wiki.0x8c.org"
+  },
+  {
+    title: "Mastodon",
+    href: "https://infosec.exchange/@tiff"
+  }
+]
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="tiff on the web.">
 	<main>
-		<h1>@tiff</h1>
+    <div class="profile-image-container">
+      <img src="./favicon.png" width="200" height="200" alt="profile-image" class="profile-image">
+    </div>
+		<h1 class="center">@tiff</h1>
 		<p class="center">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			
+			<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Mono&weight=500&size=22&pause=1000&color=2EE1A7&center=true&width=432&lines=Places+you+can+find+me+on+the+web" alt="Typing SVG" /></a>
+		<ul>
+			{links.map((link) => <ProfileLinks {...link} />)}
 		</ul>
 	</main>
 </Layout>
@@ -19,15 +56,28 @@ import Layout from '../layouts/Layout.astro';
 	main {
 		margin: auto;
 		padding: 1.5rem;
-		max-width: calc(100% - 2rem);
+		max-width: calc(100% - 81rem);
 	}
 	h1 {
 		font-size: 4rem;
 		font-weight: 800;
 		line-height: 1;
 		text-align: center;
+    color: #2ee1a7;
 	}
   .center {
     text-align: center;
   }
+
+  .profile-image-container {
+    background: transparent;
+    border-radius: 100%;
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* .profile-image {
+
+  } */
 </style>
