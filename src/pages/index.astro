@@ -44,11 +44,15 @@ const links = [
       <img src="./favicon.png" width="200" height="200" alt="profile-image" class="profile-image">
     </div>
 		<h1 class="center">@tiff</h1>
-		<p class="center">
-			<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Mono&weight=500&size=22&pause=1000&color=2EE1A7&center=true&width=432&lines=Places+you+can+find+me+on+the+web" alt="Typing SVG" /></a>
-		<ul>
-			{links.map((link) => <ProfileLinks {...link} />)}
-		</ul>
+    <p class="center">
+
+      <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Mono&weight=500&size=22&duration=3000&pause=500&color=2EE1A7&center=true&vCenter=true&width=280&lines=Places+you+can+;find+me;on+the+web" alt="Typing SVG" /></a>
+    </p>
+    <section class="container">
+      <ul>
+        {links.map((link) => <ProfileLinks {...link} />)}
+      </ul>
+    </section>
 	</main>
 </Layout>
 
@@ -56,9 +60,10 @@ const links = [
 	main {
 		margin: auto;
 		padding: 1.5rem;
-		max-width: calc(100%-10rem);
-    /* min-width: calc(100%-10rem); */
+    max-width: calc(68% - 1rem);
+    overflow: hidden;
 	}
+
 	h1 {
 		font-size: 4rem;
 		font-weight: 800;
@@ -77,6 +82,8 @@ const links = [
     display: block;
     margin: 0 auto;
   }
+
+
 
   /* .profile-image {
 
